@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>功德计数器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #meritBar {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+        #woodFish {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            border: 1px solid black; /* 边框改为1像素 */
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加阴影 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="meritBar">
+        功德: <span id="merit">0</span>
+    </div>
+    <button id="woodFish">敲木鱼</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let merit = document.getElementById('merit');
+            let woodFishButton = document.getElementById('woodFish');
+            
+            let currentMerit = 0;
+            
+            woodFishButton.addEventListener('click', function() {
+                currentMerit++;
+                merit.textContent = currentMerit;
+            });
+        });
+    </script>
+</body>
+</html>
